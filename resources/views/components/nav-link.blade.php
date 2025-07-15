@@ -1,8 +1,13 @@
-@props(['href','active'])
+@props(['href', 'active'])
 
-<a href="{{ $href }}"
-   {{ $attributes->merge(['class' => 'flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition']) }}
-   @class(['bg-blue-50 text-blue-600' => $active])
->
-  {{ $slot }}
-</a>
+@php
+$classes = $active
+    ? 'flex items-center px-4 py-2 rounded bg-blue-100 text-blue-700 font-semibold'
+    : 'flex items-center px-4 py-2 rounded text-gray-700 hover:bg-gray-100';
+@endphp
+
+<li>
+  <a href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }}>
+    {{ $slot }}
+  </a>
+</li>

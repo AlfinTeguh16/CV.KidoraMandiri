@@ -5,34 +5,37 @@
 <div class="max-w-7xl mx-auto px-4 py-6">
     <h1 class="text-2xl font-semibold mb-6 text-gray-800">Insiden</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="flex flex-col gap-6">
 
         <!-- Bar Chart: Insiden per Bulan -->
-        <div class="bg-white rounded-lg shadow p-4 overflow-hidden col-span-2">
+        <div class="bg-white rounded-lg shadow p-4 overflow-hidden w-full">
             <h2 class="text-lg font-medium mb-2 text-gray-700">Jumlah Insiden per Bulan</h2>
             <canvas id="barInsidenBulan"></canvas>
         </div>
 
         <!-- Line Chart: Heatmap Kalender (Tren Waktu) -->
-        <div class="bg-white rounded-lg shadow p-4 overflow-hidden col-span-2">
+        <div class="bg-white rounded-lg shadow p-4 overflow-hidden w-full">
             <h2 class="text-lg font-medium mb-2 text-gray-700">Kapan Insiden Terjadi</h2>
             <canvas id="lineHeatmapInsiden"></canvas>
         </div>
 
-        <!-- Horizontal Bar: Lokasi -->
-        <div class="bg-white rounded-lg shadow p-4 overflow-hidden">
-            <h2 class="text-lg font-medium mb-2 text-gray-700">Lokasi Insiden</h2>
-            <canvas id="barLokasiInsiden"></canvas>
-        </div>
+        <!-- Row for Lokasi and Jenis Insiden -->
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Horizontal Bar: Lokasi -->
+            <div class="bg-white rounded-lg shadow p-4 overflow-hidden flex-1">
+                <h2 class="text-lg font-medium mb-2 text-gray-700">Lokasi Insiden</h2>
+                <canvas id="barLokasiInsiden"></canvas>
+            </div>
 
-        <!-- Pie Chart: Jenis Insiden -->
-        <div class="bg-white rounded-lg shadow p-4 overflow-hidden">
-            <h2 class="text-lg font-medium mb-2 text-gray-700">Proporsi Jenis Insiden</h2>
-            <canvas id="pieJenisInsiden"></canvas>
+            <!-- Pie Chart: Jenis Insiden -->
+            <div class="bg-white rounded-lg shadow p-4 overflow-hidden flex-1">
+                <h2 class="text-lg font-medium mb-2 text-gray-700">Proporsi Jenis Insiden</h2>
+                <canvas id="pieJenisInsiden"></canvas>
+            </div>
         </div>
 
         <!-- Pie Chart: Proporsi Insiden per Departemen -->
-        <div class="bg-white rounded-lg shadow p-4 overflow-hidden col-span-2">
+        <div class="bg-white rounded-lg shadow p-4 overflow-hidden w-full">
             <h2 class="text-lg font-medium mb-2 text-gray-700">Proporsi Insiden per Departemen</h2>
             <canvas id="pieDepartemen"></canvas>
         </div>

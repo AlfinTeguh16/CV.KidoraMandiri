@@ -34,9 +34,9 @@
         </div>
     </div>
 </div>
-@endsection
 
-@section('scripts')
+
+
 <script>
     // Fungsi bantu untuk mengurutkan bulan secara benar
     const bulanOrder = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
@@ -207,3 +207,6 @@
 </script>
 
 @endsection
+
+
+
